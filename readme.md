@@ -1,4 +1,4 @@
-# PEARL – Peptide Ensemble Analysis & Research Library
+# PEARL – Peptide Engineering & Assembly via Residue-specific Landscapes
 
 
 
@@ -79,16 +79,13 @@ Key outputs:
 ### **data/**
 
 Stores all necessary input and intermediate files for the analyses, including:
+ 
 
-- Amber trajectory (`*.nc`) and topology (`parm7`) files  
-
-- Preprocessed NumPy arrays  
+- Preprocessed csv files 
 
 - Contact matrices, block averages, RDF tables  
 
 
-
-*Note:* Large files should ideally be excluded using `.gitignore`.
 
 
 
@@ -110,9 +107,9 @@ Key features:
 
 - Contact matrices  
 
-- Heatmaps and publication-ready plots  
+- Heatmaps 
 
-- Sequence comparison tools  
+- Sequence comparison  
 
 
 
@@ -150,17 +147,15 @@ Outputs:
 
 Tools for computing radial distribution functions for atom groups of interest,
 
-supporting solvent structuring analysis around aromatic and hydrophobic motifs.
+
 
 
 
 Outputs:
 
-- g(r) curves  
+- g(r) curves   
 
-- Integrated coordination numbers  
-
-- Solvent structure comparison across sequences and solvent models  
+- Residue group patterning comparison across sequences 
 
 
 
@@ -193,9 +188,7 @@ Heavy-atom contacts
 
 Aromatic π–π interactions
 
-Solvent structuring via RDF
-
-Sequence comparisons in OPC3 vs OPC4 environments
+End-to-END interactions via RDF
 
 These metrics help establish connections between peptide hydrophobicity,
 aromaticity, positional context, and emergent assembly behavior.
@@ -218,4 +211,4 @@ for continuous support, feedback, and guidance.
 For questions or collaboration inquiries, please contact:
 
 Shimanto Roy
-Email: your email here
+Email: dtc9ry@virginia.edu
