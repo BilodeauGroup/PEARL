@@ -38,10 +38,6 @@ PEARL/
 
 
 
-yaml
-
-Copy code
-
 
 
 ---
@@ -123,7 +119,7 @@ Full pipeline for aromatic π–π interaction detection. Calculates the number 
 
 identity of aromatic pairs (e.g., Phe–Tyr, Tyr–Tyr) that participate in stacking
 
-interactions, including comparisons between OPC3 and OPC4 solvent models.
+interactions.
 
 
 
