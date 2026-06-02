@@ -1,0 +1,5 @@
+MDAnalysis
+numpy
+pandas
+matplotlib
+seaborn
