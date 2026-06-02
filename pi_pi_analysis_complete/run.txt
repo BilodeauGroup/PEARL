@@ -1,0 +1,4 @@
+python main.py
+python analysis/plot_total_interactions_block_avg.py
+python analysis/plot_total_interactions_sem_window.py
+
