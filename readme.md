@@ -1,4 +1,4 @@
-# PEARL – Peptide Engineering & Assembly via Residue-specific Landscapes
+# PEARL – Peptide Ensembles for Assembly and Rational Library design
 
 
 
@@ -6,7 +6,7 @@ PEARL is a modular analysis framework designed for studying self-assembling
 
 pentapeptides using molecular dynamics (MD) simulations. This repository
 
-contains computational workflows for quantifying peptide aggregation,
+contains computational workflows for quantifying peptide 
 
 clustering, π–π interactions, residue contacts, and solvent structure. These
 
@@ -117,7 +117,7 @@ Key features:
 
 Full pipeline for aromatic π–π interaction detection. Calculates the number and
 
-identity of aromatic pairs (e.g., Phe–Tyr, Tyr–Tyr) that participate in stacking
+identity of aromatic pairs (e.g., Phe–Tyr, Tyr–Tyr etc.) that participate in stacking
 
 interactions.
 
@@ -167,7 +167,7 @@ Outputs:
 
 ```bash
 
-git clone <your-github-url>
+git clone https://github.com/BilodeauGroup/PEARL.git
 
 cd PEARL
 
