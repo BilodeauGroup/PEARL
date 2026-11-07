@@ -16,10 +16,11 @@ for seq in sequences:
             u = mda.Universe(parm7_file, traj_file, topology_format="PARM7")
             start_frame, end_frame = determine_frame_selection(seq, len(u.trajectory))
 
-            num_clusters, cluster_sizes = process_trajectory(u, "protein", start_frame, end_frame, step=50)
+            step = 50
+            num_clusters, cluster_sizes = process_trajectory(u, "protein", start_frame, end_frame, step=step)
 
             for i, num in enumerate(num_clusters):
-                cluster_data.append([seq, rep, (start_frame + i * 50) * 0.02, num])
+                cluster_data.append([seq, rep, (start_frame + i * step) * 0.02, num])
 
             for time_ns, size in cluster_sizes:
                 size_distribution.append([seq, rep, time_ns, size])

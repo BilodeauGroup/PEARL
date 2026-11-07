@@ -14,14 +14,37 @@ def find_peptide_clusters(matrix):
             if matrix[i][j] == 1:
                 current_cluster.add(j)
 
-    i = 0
-    while i < len(clusters):
-        j = i + 1
-        while j < len(clusters):
-            if clusters[i] & clusters[j]:
-                clusters[i] |= clusters[j]
-                del clusters[j]
-            else:
-                j += 1
-        i += 1
+    clusters = merge_clusters(clusters)
+
+    assert clusters is not None
+    assert all(isinstance(c, set) for c in clusters)
+
+    total_clustered = sum(len(c) for c in clusters)
+    unique_clustered = len(set().union(*clusters))
+    assert total_clustered == unique_clustered  # no peptide in two clusters
+    assert unique_clustered == 30               # every peptide assigned
+
+    return clusters
+
+
+def merge_clusters(clusters):
+    changed = True
+
+    while changed:
+        changed = False
+        i = 0
+
+        while i < len(clusters):
+            j = i + 1
+
+            while j < len(clusters):
+                if clusters[i] & clusters[j]:
+                    clusters[i] |= clusters[j]
+                    del clusters[j]
+                    changed = True
+                else:
+                    j += 1
+
+            i += 1
+
     return clusters
